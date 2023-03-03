@@ -4,12 +4,14 @@ import "./styles.css";
 
 import TimerSection from "./Timer";
 import Resource from "./Resource";
+import Player from "./Player";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
     <StrictMode>
         <TimerSection />
         <div className="container">
+            <Player faction="faderan" name="Cecilia" />
             <Resource resource="white" count="2" />
             <Resource resource="brown" count="30" />
             <Resource resource="green" count="13" />

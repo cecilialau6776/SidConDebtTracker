@@ -55,7 +55,13 @@ body {
   paint-order: stroke fill;
   -webkit-text-stroke: .1em white;
 }
-.resource .centered {
-/*     position: absolute; */
-/*     top: 50%; */
+
+.faction-icon {
+    height: 1em;
+    width: 1em;
+}
+
+.player div,.player span {
+    display: inline-block;
+    margin: 0.1em;
 }
