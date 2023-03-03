@@ -1,20 +1,20 @@
 import React from 'react';
 import "./styles.css";
 
-import white from './assets/images/white.png';
-import brown from './assets/images/brown.png';
-import green from './assets/images/green.png';
-import blue from './assets/images/blue.png';
-import yellow from './assets/images/yellow.png';
-import black from './assets/images/black.png';
-import victory_point from './assets/images/victory_point.png';
-import ship from './assets/images/ship.png';
-import small_any from './assets/images/small_any.png';
-import large_any from './assets/images/large_any.png';
-import small_grey from './assets/images/small_grey.png';
-import large_grey from './assets/images/large_grey.png';
+import white from './assets/images/resources/white.png';
+import brown from './assets/images/resources/brown.png';
+import green from './assets/images/resources/green.png';
+import blue from './assets/images/resources/blue.png';
+import yellow from './assets/images/resources/yellow.png';
+import black from './assets/images/resources/black.png';
+import victory_point from './assets/images/resources/victory_point.png';
+import ship from './assets/images/resources/ship.png';
+import small_any from './assets/images/resources/small_any.png';
+import large_any from './assets/images/resources/large_any.png';
+import small_grey from './assets/images/resources/small_grey.png';
+import large_grey from './assets/images/resources/large_grey.png';
 
-function Resource({resource, count}) {
+function Resource({ resource, count }) {
     let r;
     let classname;
     let c;
@@ -66,7 +66,7 @@ function Resource({resource, count}) {
     return (
         <div className="container">
             <div className={`resource ${classname}`}>
-                <img className={`centered ${classname}`} src={r} alt={count + ' ' + resource + ' cube(s)'}/>
+                <img className={`centered ${classname}`} src={r} alt={count + ' ' + resource + ' cube(s)'} />
                 <span className="centered">{c}</span>
             </div>
         </div>
