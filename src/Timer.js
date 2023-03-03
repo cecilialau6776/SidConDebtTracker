@@ -15,12 +15,6 @@ function Timer() {
         setSeconds(Math.floor((time / 1000) % 60));
     };
 
-    function reset() {
-        setMinutes(time);
-        setSeconds(0);
-        deadline = new Date(Date.now() + time * 60000);
-    };
-
     useEffect(() => {
         const interval = setInterval(() => getTime(deadline), 1000);
 
@@ -35,13 +29,14 @@ function Timer() {
 };
 
 const TimerSection = () => {
+    function reset() { }
     function resolveDebts() { }
     function newDebt() { }
     return (
         <div>
             <Timer style={{ height: 60 }} />
             <div className="container" style={{ height: 40 }}>
-                <button onClick={Timer.reset}>Reset</button>
+                <button onClick={reset}>Reset</button>
                 <button onClick={resolveDebts}>Resolve Debts</button>
                 <button onClick={newDebt}>New Debt</button>
             </div>
