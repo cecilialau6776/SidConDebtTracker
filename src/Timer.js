@@ -1,46 +1,33 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-function Timer() {
+const TimerSection = () => {
     let time = 15;
-    const [minutes, setMinutes] = useState(time);
-    const [seconds, setSeconds] = useState(0);
-    let deadline = new Date(Date.now() + time * 60000);
-    // setMinutes(time);
-
-    const getTime = () => {
-        const time = deadline - Date.now();
-        if (time < 0) return;
-        setMinutes(Math.floor((time / 1000 / 60) % 60));
-        setSeconds(Math.floor((time / 1000) % 60));
-    };
+    const [seconds, setSeconds] = useState(time * 60);
 
     useEffect(() => {
-        const interval = setInterval(() => getTime(deadline), 1000);
+        const interval = setInterval(() => { if (seconds > 0) setSeconds(seconds - 1) }, 1000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [seconds]);
 
-    return (
-        <div className="timer">
-            <p>{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}</p>
-        </div>
-    );
-};
-
-const TimerSection = () => {
-    function reset() { }
     function resolveDebts() { }
     function newDebt() { }
+    function reset() {
+        setSeconds(time * 60);
+    };
+
     return (
         <div>
-            <Timer style={{ height: 60 }} />
+            <div style={{ height: 60 }} className="timer">
+                <p>{String(Math.floor(seconds / 60)).padStart(2, '0')}:{String(seconds % 60).padStart(2, '0')}</p>
+            </div>
             <div className="container" style={{ height: 40 }}>
                 <button onClick={reset}>Reset</button>
                 <button onClick={resolveDebts}>Resolve Debts</button>
                 <button onClick={newDebt}>New Debt</button>
             </div>
-        </div >
+        </div>
     )
 }
 
