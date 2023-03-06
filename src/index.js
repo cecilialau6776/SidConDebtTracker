@@ -5,25 +5,34 @@ import "./styles.css";
 import TimerSection from "./Timer";
 import Resource from "./Resource";
 import Player from "./Player";
+import Debt from "./Debt";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
-    <StrictMode>
-        <TimerSection />
-        <div className="container">
-            <Player faction="faderan" name="Cecilia" />
-            <Resource resource="white" count="2" />
-            <Resource resource="brown" count="30" />
-            <Resource resource="green" count="13" />
-            <Resource resource="black" count="1" />
-            <Resource resource="blue" count="5" />
-            <Resource resource="yellow" count="0" />
-            <Resource resource="victory_point" count="0" />
-            <Resource resource="ship" count="0" />
-            <Resource resource="small_any" count="1" />
-            <Resource resource="large_any" count="2" />
-            <Resource resource="small_grey" count="3" />
-            <Resource resource="large_grey" count="4" />
-        </div>
-    </StrictMode>
+  <StrictMode>
+    <TimerSection />
+    <Debt
+      from_faction="imdril"
+      to_faction="kjas"
+      white="3"
+      green="2"
+      large_any="4"
+      large_grey="2"
+    />
+    <div className="container invis">
+      <Player faction="zeth" name="Cecilia" />
+      <Resource resource="white" count="2" />
+      <Resource resource="brown" count="30" />
+      <Resource resource="green" count="13" />
+      <Resource resource="black" count="1" />
+      <Resource resource="blue" count="5" />
+      <Resource resource="yellow" count="0" />
+      <Resource resource="victory_point" count="0" />
+      <Resource resource="ship" count="0" />
+      <Resource resource="small_any" count="1" />
+      <Resource resource="large_any" count="2" />
+      <Resource resource="small_grey" count="3" />
+      <Resource resource="large_grey" count="4" />
+    </div>
+  </StrictMode>
 );

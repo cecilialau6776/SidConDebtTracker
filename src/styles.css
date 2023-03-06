@@ -1,28 +1,28 @@
 @font-face {
-  font-family: evogria;
-  src: url("./assets/Evogria.otf") format("opentype");
+    font-family: evogria;
+    src: url("./assets/Evogria.otf") format("opentype");
 }
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: evogria;
-  margin: 20px;
-  padding: 0;
+    font-family: evogria;
+    margin: 20px;
+    padding: 0;
 }
 
 .timer {
-  font-family: evogria;
-  font-size: 4em;
+    font-family: evogria;
+    font-size: 4em;
 }
 
 .container {
     display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: evogria;
-  position: relative;
+    align-items: center;
+    justify-content: center;
+    font-family: evogria;
+    position: relative;
 }
 
 .resource {
@@ -32,36 +32,45 @@ body {
 .large-cube {
     height: 3em;
 }
-.large-cube span {
-    font-size: 1.25em;
-}
 
 .small-cube {
     height: 2.5em;
 }
-.small-cube span {
-    font-size: 1em;
+
+.arrow {
+    height: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
 .resource .no-cubes {
     opacity: 0.33;
 }
 .resource span.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  paint-order: stroke fill;
-  -webkit-text-stroke: .1em white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.25em;
+    paint-order: stroke fill;
+    -webkit-text-stroke: .1em white;
 }
 
 .faction-icon {
-    height: 1em;
-    width: 1em;
+    height: 1.8em;
+    width: 1.8em;
 }
 
 .player div,.player span {
     display: inline-block;
-    margin: 0.1em;
+    margin: 0.2em;
+}
+
+.debt {
+    display: inline-flex;
+}
+
+.invis {
+    display: none;
 }
