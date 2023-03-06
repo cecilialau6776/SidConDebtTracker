@@ -27,12 +27,12 @@ const faction_dict = {
   zeth: zeth,
 };
 
-function Player({ faction }) {
+function Player({ faction, className }) {
   const name = useContext(PlayerInfo)[faction];
   const icon = faction_dict[faction];
 
   return (
-    <div className="player container">
+    <div className={`player container ${className}`}>
       <img
         className={`faction-icon ${faction}`}
         src={icon}

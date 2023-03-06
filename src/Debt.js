@@ -63,24 +63,26 @@ function Debt({
 
   return (
     <div className={`debt`}>
-      <Player faction={from_faction} />
-      {white_content}
-      {brown_content}
-      {green_content}
-      {blue_content}
-      {yellow_content}
-      {black_content}
-      {victory_point_content}
-      {ship_content}
-      {small_any_content}
-      {large_any_content}
-      {small_grey_content}
-      {large_grey_content}
-      {value_content}
+      <div className="container">
+        <Player faction={from_faction} />
+        {white_content}
+        {brown_content}
+        {green_content}
+        {blue_content}
+        {yellow_content}
+        {black_content}
+        {victory_point_content}
+        {ship_content}
+        {small_any_content}
+        {large_any_content}
+        {small_grey_content}
+        {large_grey_content}
+        {value_content}
+      </div>
       <div className="container">
         <img className={`centered arrow`} src={arrow} alt={`owes arrow`} />
+        <Player className="" faction={to_faction} />
       </div>
-      <Player faction={to_faction} />
     </div>
   );
 }

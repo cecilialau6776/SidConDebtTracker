@@ -19,8 +19,16 @@ root.render(
       large_any="4"
       large_grey="2"
     />
+    <Debt
+      from_faction="zeth"
+      to_faction="faderan"
+      white="3"
+      green="2"
+      large_any="4"
+      large_grey="2"
+    />
     <div className="container invis">
-      <Player faction="zeth" name="Cecilia" />
+      <Player faction="zeth" />
       <Resource resource="white" count="2" />
       <Resource resource="brown" count="30" />
       <Resource resource="green" count="13" />

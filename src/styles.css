@@ -21,7 +21,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: evogria;
     position: relative;
 }
 
@@ -65,12 +64,19 @@ body {
 .player div,.player span {
     display: inline-block;
     margin: 0.2em;
+    width: 4em;
 }
 
 .debt {
     display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .invis {
     display: none;
+}
+
+.float-right {
+    float: right;
 }
