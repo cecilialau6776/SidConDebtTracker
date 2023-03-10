@@ -1,5 +1,5 @@
 import React from "react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "./styles.css";
 import "./factions.css";
 
@@ -13,7 +13,7 @@ import unity from "./assets/images/icons/unity.png";
 import yengii from "./assets/images/icons/yengii.png";
 import zeth from "./assets/images/icons/zeth.png";
 
-import { PlayerInfo } from "./PlayerInfo.js";
+import { GameInfo } from "./GameInfo.js";
 
 const faction_dict = {
   caylion: caylion,
@@ -28,7 +28,7 @@ const faction_dict = {
 };
 
 function Player({ faction, className }) {
-  const name = useContext(PlayerInfo)[faction];
+  const name = useContext(GameInfo)[faction];
   const icon = faction_dict[faction];
 
   return (

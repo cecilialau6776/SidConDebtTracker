@@ -53,7 +53,16 @@ body {
     text-align: center;
     font-size: 1.25em;
     paint-order: stroke fill;
-    -webkit-text-stroke: .1em white;
+    text-shadow: 0.1em 0 white, 
+                -0.1em 0 white, 
+                0 0.1em white, 
+                0 -0.1em white, 
+
+                -0.1em 0.1em white, 
+                -0.1em -0.1em white, 
+                0.1em 0.1em white, 
+                0.1em -0.1em white;
+    /* -webkit-text-stroke: .1em white; */
 }
 
 .faction-icon {
@@ -77,6 +86,52 @@ body {
     display: none;
 }
 
-.float-right {
-    float: right;
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 20%;
+    background-color: white;
+    z-index: 1;
+    box-shadow: -0.15em 0 0.15em lightgrey;
+    padding: .5em;
+}
+
+.close-sidebar {
+    font-size: 1.5em;
+    display: block;
+    color: grey;
+}
+
+.debt_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.radio {
+    display: inline-flex;
+    align-items: center;
+}
+.radio label {
+    display: inline-flex;
+    text-align: center;
+}
+
+.half-arrow {
+    height: 2em;
+}
+
+.resource_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 3.25em);
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.resource_input {
+    place-self: center;
 }

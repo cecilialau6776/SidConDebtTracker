@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-export const PlayerInfo = createContext({
+export const GameInfo = createContext({
   caylion: "Caylion",
   eni_et: "Eni Et",
   faderan: "Faderan",
@@ -11,4 +11,5 @@ export const PlayerInfo = createContext({
   yengii: "Yengii",
   zeth: "Zeth",
   unity_in_game: false,
+  turn: 1,
 });

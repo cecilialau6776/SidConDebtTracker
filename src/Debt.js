@@ -4,7 +4,7 @@ import "./styles.css";
 
 import Resource from "./Resource";
 import Player from "./Player";
-import { PlayerInfo } from "./PlayerInfo";
+import { GameInfo } from "./GameInfo";
 
 import arrow from "./assets/images/arrow.png";
 
@@ -26,7 +26,7 @@ function Debt({
   value = 0,
   custom = null,
 }) {
-  const unity_in_game = useContext(PlayerInfo)["unity_in_game"];
+  const unity_in_game = useContext(GameInfo)["unity_in_game"];
 
   const white_content =
     white > 0 ? <Resource resource="white" count={white} /> : null;

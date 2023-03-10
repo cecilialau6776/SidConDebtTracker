@@ -31,8 +31,7 @@ const resource_dict = {
 
 function Resource({ resource, count }) {
   const color = resource_dict[resource].color;
-  const type =
-    resource_dict[resource].type + (count === "0" ? " no-cubes" : "");
+  const type = resource_dict[resource].type + (count === 0 ? " no-cubes" : "");
   const resourceCount = count > 1 ? count : null;
 
   return (
